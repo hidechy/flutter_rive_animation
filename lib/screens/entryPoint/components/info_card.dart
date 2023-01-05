@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 
 class InfoCard extends StatelessWidget {
   const InfoCard({
-    Key? key,
+    super.key,
     required this.name,
     required this.bio,
-  }) : super(key: key);
+  });
 
-  final String name, bio;
+  final String name;
+  final String bio;
 
   @override
   Widget build(BuildContext context) {

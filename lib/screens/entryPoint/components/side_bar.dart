@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_to_list_in_spreads
+
 import 'package:flutter/material.dart';
 
 import '../../../model/menu.dart';
@@ -32,13 +34,13 @@ class _SideBarState extends State<SideBar> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const InfoCard(
-                name: "Abu Anwar",
-                bio: "YouTuber",
+                name: 'Abu Anwar',
+                bio: 'YouTuber',
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 24, top: 32, bottom: 16),
                 child: Text(
-                  "Browse".toUpperCase(),
+                  'Browse'.toUpperCase(),
                   style: Theme.of(context)
                       .textTheme
                       .titleMedium!
@@ -64,7 +66,7 @@ class _SideBarState extends State<SideBar> {
               Padding(
                 padding: const EdgeInsets.only(left: 24, top: 40, bottom: 16),
                 child: Text(
-                  "History".toUpperCase(),
+                  'History'.toUpperCase(),
                   style: Theme.of(context)
                       .textTheme
                       .titleMedium!

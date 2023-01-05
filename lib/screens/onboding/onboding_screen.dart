@@ -21,7 +21,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
   @override
   void initState() {
     _btnAnimationController = OneShotAnimation(
-      "active",
+      'active',
       autoplay: false,
     );
     super.initState();
@@ -37,7 +37,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
             left: 100,
             bottom: 100,
             child: Image.asset(
-              "assets/Backgrounds/Spline.png",
+              'assets/Backgrounds/Spline.png',
             ),
           ),
           Positioned.fill(
@@ -47,7 +47,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
             ),
           ),
           const RiveAnimation.asset(
-            "assets/RiveAssets/shapes.riv",
+            'assets/RiveAssets/shapes.riv',
           ),
           Positioned.fill(
             child: BackdropFilter(
@@ -72,17 +72,17 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                       child: Column(
                         children: const [
                           Text(
-                            "Learn design & code",
+                            'Learn design & code',
                             style: TextStyle(
                               fontSize: 60,
                               fontWeight: FontWeight.w700,
-                              fontFamily: "Poppins",
+                              fontFamily: 'Poppins',
                               height: 1.2,
                             ),
                           ),
                           SizedBox(height: 16),
                           Text(
-                            "Don’t skip design. Learn design and code, by building real apps with Flutter and Swift. Complete courses about the best tools.",
+                            'Don’t skip design. Learn design and code, by building real apps with Flutter and Swift. Complete courses about the best tools.',
                           ),
                         ],
                       ),
@@ -114,7 +114,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                     const Padding(
                       padding: EdgeInsets.symmetric(vertical: 24),
                       child: Text(
-                          "Purchase includes access to 30+ courses, 240+ premium tutorials, 120+ hours of videos, source files and certificates."),
+                          'Purchase includes access to 30+ courses, 240+ premium tutorials, 120+ hours of videos, source files and certificates.'),
                     )
                   ],
                 ),

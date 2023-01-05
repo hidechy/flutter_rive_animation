@@ -3,13 +3,14 @@ import 'package:flutter_svg/svg.dart';
 
 class SecondaryCourseCard extends StatelessWidget {
   const SecondaryCourseCard({
-    Key? key,
+    super.key,
     required this.title,
-    this.iconsSrc = "assets/icons/ios.svg",
+    this.iconsSrc = 'assets/icons/ios.svg',
     this.colorl = const Color(0xFF7553F6),
-  }) : super(key: key);
+  });
 
-  final String title, iconsSrc;
+  final String title;
+  final String iconsSrc;
   final Color colorl;
 
   @override
@@ -34,7 +35,7 @@ class SecondaryCourseCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 const Text(
-                  "Watch video - 15 mins",
+                  'Watch video - 15 mins',
                   style: TextStyle(
                     color: Colors.white60,
                     fontSize: 16,

@@ -1,3 +1,5 @@
+// ignore_for_file: cast_nullable_to_non_nullable
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -120,12 +122,12 @@ class _EntryPointState extends State<EntryPoint>
               },
               riveOnInit: (artboard) {
                 final controller = StateMachineController.fromArtboard(
-                    artboard, "State Machine");
+                    artboard, 'State Machine');
 
                 artboard.addController(controller!);
 
                 isMenuOpenInput =
-                    controller.findInput<bool>("isOpen") as SMIBool;
+                    controller.findInput<bool>('isOpen') as SMIBool;
                 isMenuOpenInput.value = true;
               },
             ),
@@ -156,7 +158,7 @@ class _EntryPointState extends State<EntryPoint>
                 ...List.generate(
                   bottomNavItems.length,
                   (index) {
-                    Menu navBar = bottomNavItems[index];
+                    final navBar = bottomNavItems[index];
                     return BtmNavItem(
                       navBar: navBar,
                       press: () {

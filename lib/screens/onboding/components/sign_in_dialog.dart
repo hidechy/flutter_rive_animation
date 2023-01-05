@@ -6,7 +6,7 @@ import 'sign_in_form.dart';
 void showCustomDialog(BuildContext context, {required ValueChanged onValue}) {
   showGeneralDialog(
     context: context,
-    barrierLabel: "Barrier",
+    barrierLabel: 'Barrier',
     barrierDismissible: true,
     barrierColor: Colors.black.withOpacity(0.5),
     transitionDuration: const Duration(milliseconds: 400),
@@ -40,17 +40,17 @@ void showCustomDialog(BuildContext context, {required ValueChanged onValue}) {
                 Column(
                   children: [
                     const Text(
-                      "Sign in",
+                      'Sign in',
                       style: TextStyle(
                         fontSize: 34,
-                        fontFamily: "Poppins",
+                        fontFamily: 'Poppins',
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     const Padding(
                       padding: EdgeInsets.symmetric(vertical: 16),
                       child: Text(
-                        "Access to 240+ hours of content. Learn design and code, by building real apps with Flutter and Swift.",
+                        'Access to 240+ hours of content. Learn design and code, by building real apps with Flutter and Swift.',
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -63,7 +63,7 @@ void showCustomDialog(BuildContext context, {required ValueChanged onValue}) {
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 16),
                           child: Text(
-                            "OR",
+                            'OR',
                             style: TextStyle(
                               color: Colors.black26,
                               fontWeight: FontWeight.w500,
@@ -76,7 +76,7 @@ void showCustomDialog(BuildContext context, {required ValueChanged onValue}) {
                     const Padding(
                       padding: EdgeInsets.symmetric(vertical: 24),
                       child: Text(
-                        "Sign up with Email, Apple or Google",
+                        'Sign up with Email, Apple or Google',
                         style: TextStyle(color: Colors.black54),
                       ),
                     ),
@@ -87,7 +87,7 @@ void showCustomDialog(BuildContext context, {required ValueChanged onValue}) {
                           onPressed: () {},
                           padding: EdgeInsets.zero,
                           icon: SvgPicture.asset(
-                            "assets/icons/email_box.svg",
+                            'assets/icons/email_box.svg',
                             height: 64,
                             width: 64,
                           ),
@@ -96,7 +96,7 @@ void showCustomDialog(BuildContext context, {required ValueChanged onValue}) {
                           onPressed: () {},
                           padding: EdgeInsets.zero,
                           icon: SvgPicture.asset(
-                            "assets/icons/apple_box.svg",
+                            'assets/icons/apple_box.svg',
                             height: 64,
                             width: 64,
                           ),
@@ -105,7 +105,7 @@ void showCustomDialog(BuildContext context, {required ValueChanged onValue}) {
                           onPressed: () {},
                           padding: EdgeInsets.zero,
                           icon: SvgPicture.asset(
-                            "assets/icons/google_box.svg",
+                            'assets/icons/google_box.svg',
                             height: 64,
                             width: 64,
                           ),

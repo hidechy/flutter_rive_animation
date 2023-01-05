@@ -1,3 +1,5 @@
+// ignore_for_file: cast_nullable_to_non_nullable
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -6,8 +8,8 @@ import 'package:rive_animation/screens/entryPoint/entry_point.dart';
 
 class SignInForm extends StatefulWidget {
   const SignInForm({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<SignInForm> createState() => _SignInFormState();
@@ -24,7 +26,7 @@ class _SignInFormState extends State<SignInForm> {
   late SMITrigger confetti;
 
   void _onCheckRiveInit(Artboard artboard) {
-    StateMachineController? controller =
+    final controller =
         StateMachineController.fromArtboard(artboard, 'State Machine 1');
 
     artboard.addController(controller!);
@@ -34,11 +36,11 @@ class _SignInFormState extends State<SignInForm> {
   }
 
   void _onConfettiRiveInit(Artboard artboard) {
-    StateMachineController? controller =
-        StateMachineController.fromArtboard(artboard, "State Machine 1");
+    final controller =
+        StateMachineController.fromArtboard(artboard, 'State Machine 1');
     artboard.addController(controller!);
 
-    confetti = controller.findInput<bool>("Trigger explosion") as SMITrigger;
+    confetti = controller.findInput<bool>('Trigger explosion') as SMITrigger;
   }
 
   void singIn(BuildContext context) {
@@ -97,7 +99,7 @@ class _SignInFormState extends State<SignInForm> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "Email",
+                'Email',
                 style: TextStyle(
                   color: Colors.black54,
                 ),
@@ -107,20 +109,20 @@ class _SignInFormState extends State<SignInForm> {
                 child: TextFormField(
                   validator: (value) {
                     if (value!.isEmpty) {
-                      return "";
+                      return '';
                     }
                     return null;
                   },
                   decoration: InputDecoration(
                     prefixIcon: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: SvgPicture.asset("assets/icons/email.svg"),
+                      child: SvgPicture.asset('assets/icons/email.svg'),
                     ),
                   ),
                 ),
               ),
               const Text(
-                "Password",
+                'Password',
                 style: TextStyle(
                   color: Colors.black54,
                 ),
@@ -131,14 +133,14 @@ class _SignInFormState extends State<SignInForm> {
                   obscureText: true,
                   validator: (value) {
                     if (value!.isEmpty) {
-                      return "";
+                      return '';
                     }
                     return null;
                   },
                   decoration: InputDecoration(
                     prefixIcon: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: SvgPicture.asset("assets/icons/password.svg"),
+                      child: SvgPicture.asset('assets/icons/password.svg'),
                     ),
                   ),
                 ),
@@ -165,7 +167,7 @@ class _SignInFormState extends State<SignInForm> {
                     CupertinoIcons.arrow_right,
                     color: Color(0xFFFE0037),
                   ),
-                  label: const Text("Sign In"),
+                  label: const Text('Sign In'),
                 ),
               ),
             ],
@@ -180,16 +182,14 @@ class _SignInFormState extends State<SignInForm> {
                 ),
               )
             : const SizedBox(),
-        isShowConfetti
-            ? CustomPositioned(
+        if (isShowConfetti) CustomPositioned(
                 scale: 6,
                 child: RiveAnimation.asset(
-                  "assets/RiveAssets/confetti.riv",
+                  'assets/RiveAssets/confetti.riv',
                   onInit: _onConfettiRiveInit,
                   fit: BoxFit.cover,
                 ),
-              )
-            : const SizedBox(),
+              ) else const SizedBox(),
       ],
     );
   }
